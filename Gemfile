@@ -7,11 +7,16 @@ gem 'rails', '3.2.19'
 
 gem 'sqlite3'
 
+gem 'rake', '< 11.0'
+
+gem 'strong_parameters'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'bootstrap-sass'
+  gem 'autoprefixer-rails'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -42,4 +47,10 @@ end
 
 group :test do
   gem 'capybara', '2.7.1'
+end
+
+group :development do
+  gem 'guard', '~> 2.14.0'
+  gem 'guard-rspec', '~> 4.7.2'
+  gem 'guard-cucumber', '~> 2.1.2'
 end
